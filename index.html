@@ -39,7 +39,7 @@
 
     <section id="profile">
       <div class="section__pic-container">
-        <img src="assets/y.png" alt="" />
+        <img src="assets/img/y.png" alt="" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
@@ -48,7 +48,7 @@
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('assets/Zheer_Barzan_CV.pdf')"
+            onclick="window.open('assets/img/Zheer_Barzan_CV.pdf')"
           >
             Download CV
           </button>
@@ -58,12 +58,12 @@
         </div>
         <div id="socials-container">
           <img
-            src="assets/linkedin.png"
+            src="assets/img/linkedin.png"
             class="icon"
             onclick="location.href='' "
           />
           <img
-            src="assets/github.png"
+            src="assets/img/github.png"
             class="icon"
             onclick="location.href='' "
           />
@@ -75,17 +75,17 @@
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
-          <img src="assets/x.png" alt="" class="about-pic" />
+          <img src="assets/img/x.png" alt="" class="about-pic" />
         </div>
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <img src="assets/experience.png" alt="" class="icon" />
+              <img src="assets/img/experience.png" alt="" class="icon" />
               <h3>Experience</h3>
               <p>2+ years <br />Front-End Development</p>
             </div>
             <div class="details-container">
-              <img src="assets/education.png" alt="" class="icon" />
+              <img src="assets/img/education.png" alt="" class="icon" />
               <h3>Education</h3>
               <p>B.Sc. Degree <br />Computer Engineering</p>
             </div>
@@ -101,7 +101,7 @@
           </div>
         </div>
       </div>
-      <img src="assets/arrow.png" alt="" class="icon arrow" onclick="location.href='#experience'">
+      <img src="assets/img/arrow.png" alt="" class="icon arrow" onclick="location.href='#experience'">
     </section>
 
     <section id="experience">
@@ -114,106 +114,41 @@
                     <h2 class="experience-sub-title">
                         Front-End Development
                     </h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
 
-                    </div>
+
+                    <div class="article-container" id="data-container">
+                      </div>
+                    <script>
+                      // Fetch the JSON data from your file
+                      fetch('experince.json')
+                          .then(response => response.json())
+                          .then(data => {
+                              // Process the data (assuming it's an array of objects)
+                              const container = document.getElementById('data-container');
+                              data.forEach(item => {
+                                  const div = document.createElement('div');
+                                  div.innerHTML = `
+                                  <article>
+                                      <img src="${item.img}" alt="" style="height: 90%; width: 50%;">
+                                      <div>
+                                        <h3>${item.tech}</h3>
+                                         <p>${item.ex}</p>
+                                        </div>
+                                        </article>
+                                     
+                                  `;
+                                  container.appendChild(div);
+                              });
+                          })
+                          .catch(error => console.error('Error fetching data:', error));
+                  </script>
                 </div>
                 <!-- back-end section -->
-                <div class="details-container">
-                    <h2 class="experience-sub-title">
-                        Front-End Development
-                    </h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        
-                    </div>
-                </div>
+                
             </div>
 
         </div>
+
         <img src="assets/arrow.png" alt="" class="icon arrow" onclick="location.href='#projects'">
 
     </section>
