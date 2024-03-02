@@ -326,11 +326,16 @@ section {
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
+.desc{
+  margin: 20px;
+}
 
 .experience-details-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 .article-container {
@@ -366,8 +371,8 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  justify-content: center;
+  height: 500px;
 }
 
 .project-title {
